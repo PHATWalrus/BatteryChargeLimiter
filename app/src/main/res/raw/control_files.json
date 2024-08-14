@@ -151,6 +151,14 @@
     "experimental": true
   },
   {
+    "file": "/sys/class/qcom-battery/scenario_fcc",
+    "label": "scenario_fcc",
+    "details": "Nothing Phone 2 (Nothing Much)",
+    "chargeOn": "-1",
+    "chargeOff": "0",
+    "experimental": true
+  },
+  {
     "file": "/sys/devices/platform/7000c400.i2c/i2c-1/1-006b/charging_state",
     "label": "7000c400.i2c",
     "details": "Nvidia Shield TV (2015/2015 Pro/2017) [foster, foster_tab]",
