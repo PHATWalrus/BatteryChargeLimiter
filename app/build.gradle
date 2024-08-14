@@ -53,12 +53,17 @@ android {
         jvmTarget = '1.8'
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility "1.8"
+        targetCompatibility "1.8"
     }
     lint {
         abortOnError false
     }
+    dependenciesInfo {
+        includeInApk true
+        includeInBundle true
+    }
+    buildToolsVersion '35.0.0'
 }
 
 dependencies {

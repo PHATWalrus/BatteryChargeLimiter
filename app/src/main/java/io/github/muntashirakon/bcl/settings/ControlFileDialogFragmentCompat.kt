@@ -55,16 +55,16 @@ class ControlFileDialogFragmentCompat : PreferenceDialogFragmentCompat() {
                 val inflater = LayoutInflater.from(context)
                 convertView = inflater.inflate(R.layout.cf_row, parent, false)
                 convertView!!.setOnClickListener { h.label!!.performClick() }
-                h.label = convertView.findViewById(R.id.cf_label) as RadioButton
+                h.label = convertView.findViewById<RadioButton>(R.id.cf_label)!!
                 h.label!!.setOnClickListener { v ->
                     if (v.isEnabled) {
                         Utils.setCtrlFile(context, v.tag as ControlFile)
                         this@ControlFileDialogFragmentCompat.dialog!!.dismiss()
                     }
                 }
-                h.details = convertView.findViewById(R.id.cf_details) as TextView
-                h.experimental = convertView.findViewById(R.id.cf_experimental) as TextView
-                h.issues = convertView.findViewById(R.id.cf_issues) as TextView
+                h.details = convertView.findViewById<TextView>(R.id.cf_details)!!
+                h.experimental = convertView.findViewById<TextView>(R.id.cf_experimental)!!
+                h.issues = convertView.findViewById<TextView>(R.id.cf_issues)!!
                 convertView.tag = h
             } else {
                 h = convertView.tag as ViewHolder
